@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ChatService {
-  final String apiKey = "AIzaSyA5gzpNF2FXLctNhSWfEcvk6peK4TBOvyU";
-  final String apiUrl = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=AIzaSyA5gzpNF2FXLctNhSWfEcvk6peK4TBOvyU";
+  final String apiKey = "YOUR_API_KEY";
+  final String apiUrl = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=YOUR_API_KEY";
 
 
   Future<String> sendMessage(String message) async {
