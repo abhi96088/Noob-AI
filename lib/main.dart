@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noob/chat_screen.dart';
+import 'package:noob/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: ChatScreen(),
+      home: SplashScreen(),
     );
   }
 }
