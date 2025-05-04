@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'chat_service.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -61,10 +62,16 @@ class _ChatScreenState extends State<ChatScreen> {
                         bottomRight: isUser ? Radius.zero : Radius.circular(12),
                       ),
                     ),
-                    child: Text(
-                      message['text'] ?? "",
-                      style: TextStyle(color: isUser ? Colors.white : Colors.black, fontSize: 16),
+                    child: MarkdownBody(
+                      data: message['text'] ?? "",
+                      styleSheet: MarkdownStyleSheet(
+                        p: TextStyle(
+                          color: isUser ? Colors.white : Colors.black,
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
+
                   ),
                 );
               },
